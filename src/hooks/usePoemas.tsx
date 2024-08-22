@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { reqPoema } from "../interfaces/reqPoema";
+import { poemProps } from "../interfaces/inPoemProps";
 import axios from "axios";
 
 export const usePoemas = () => {
-  const [poemas, setPoemas] = useState<reqPoema[]>([]);
+  const [poemas, setPoemas] = useState<poemProps[]>([]);
   // const url = 'http://localhost/BackEndconPHP/carga-datos/mostrar-api.php';
   const url = "http://localhost:3001/poemas";
   useEffect(() => {
