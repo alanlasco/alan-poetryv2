@@ -1,5 +1,5 @@
 import { Footer } from "./components/Footer";
-
+import "./stylesheets/app.css";
 import Navbar from "./components/Navbar";
 
 import {

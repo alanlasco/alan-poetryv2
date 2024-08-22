@@ -1,16 +1,11 @@
-*,*::after, *::before{
-    margin:0;
-    box-sizing: border-box;
+@font-face {
+    font-family: Comic Neue;
+    src: local("Trajan Pro Regular"),
+        url("../fonts/ComicNeue-Regular.ttf") format("ttf");
 }
 
-html{
-    font-size: 62.5%;
-}
-body{
-    font-size: 1.6rem;
-}
 .nav {
-   background:rgb(190, 201, 190);
+    background: rgb(190, 201, 190);
     /* background: linear-gradient(90deg, rgba(238, 193, 57, 0.938813025210084) 35%, rgba(152, 255, 152, 1) 50%); */
     /* Cambia el color de fondo  */
     color: #fff;
@@ -25,9 +20,11 @@ body{
     /* -webkit-box-shadow: 0px 7px 5px -4px rgba(0, 0, 0, 0.50); */
     /* box-shadow: 0px 7px 5px -4px rgba(0, 0, 0, 0.50); */
 }
-.activo{
+
+.activo {
     border-bottom: 4px solid rgba(152, 255, 152, 1);
 }
+
 .nav ul {
     list-style: none;
     margin: 0 auto;
@@ -40,19 +37,20 @@ body{
 .nav li {
     margin: 0 20px;
 }
+
 /* .nav-item:hover{ */
-    /* color:rgb(255, 255, 255); */
-    
+/* color:rgb(255, 255, 255); */
+
 
 /* } */
 .nav a {
     text-decoration: none;
     color: #f0f0f0fa;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     /* Cambia el color del texto según tus preferencias */
 }
-.nav a:hover{
-    color:#fff
+
+.nav a:hover {
+    color: #fff
 }
 
 /* Estilos del contenido de la página */
@@ -66,33 +64,31 @@ body{
     font-size: 25px;
     font-weight: bold;
 }
-@font-face {
-    font-family: Pacifico-Regular;
-    src: url('../fuentes/Pacifico-Regular.ttf');
-}
 
-.brand-2{
+
+.brand-2 {
     color: rgba(152, 255, 152, 1);
     font-style: oblique;
     font-family: Pacifico-Regular;
     font-weight: 300;
 }
 
-.nav-menu{
-    display:flex;
+.nav-menu {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.5rem;
 }
 
-.toggler div{
+.toggler div {
     width: 2.5rem;
     height: 0.2rem;
     margin: 0.5rem;
     background: white;
     transition: 0.4s ease-in;
 }
-.toggler{
+
+.toggler {
     margin-top: 15px;
     margin-right: 60px;
     cursor: pointer;
@@ -100,37 +96,41 @@ body{
 }
 
 @media screen and (max-width:768px) {
-.toggler{
-    display: block;
-    float: right;
-}    
-.nav-menu{
-    position: fixed;
-    top: 50px;
-    right:0;
-    width: 50%;
-    height: 100%;
-    background: rgb(238, 193, 57);
-    background: linear-gradient(0deg, rgba(238, 193, 57, 0.938813025210084) 38%, rgba(152, 255, 152, 1) 100%);
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: 0.5s ease-in;
-    z-index: 3;
-    
+    .toggler {
+        display: block;
+        float: right;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 50px;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: rgba(152, 255, 152, 1);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        z-index: 3;
+
+    }
 }
-}
+
 /*activar clase*/
 .nav-active {
     transform: translateX(0);
 }
+
 /*animaicon*/
 
-.toggle .line1{
+.toggle .line1 {
     transform: rotate(-45deg) translate(-4px, 5px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
     transform: rotate(45deg) translate(-4px, -5px);
 }
