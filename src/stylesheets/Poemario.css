@@ -1,7 +1,13 @@
 .poemsContainer {
-    padding-top: 5vh;
+    padding-top: 5.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .poemsContainer {
+        padding-top: 12vh;
+    }
 }
