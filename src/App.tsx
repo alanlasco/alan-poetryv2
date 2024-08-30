@@ -1,22 +1,19 @@
-import { Footer } from "./components/Footer";
 import "./stylesheets/app.css";
-import Navbar from "./components/Navbar";
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Poemario } from "./screens/Poemario";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Footer />
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/poemario" element={<Poemario />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
